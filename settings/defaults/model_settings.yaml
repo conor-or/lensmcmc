@@ -1,0 +1,51 @@
+---
+# Default settings for model fitting
+
+model:
+  # Model choice
+  lens_model: "SinglePowerLaw"
+  source_model: "Sersic"
+
+  # Which parameters to fit
+  active_parameters:
+    lens:
+      - lensing_strength
+      - slope
+
+  # Whether to inherit parameter values from
+  # observation. If false use parameters below
+  inherit: True
+
+  # Model parameters to fix
+  params:
+    lens:
+      einstein_radius: 1.0
+      slope: 1.0
+      axis_ratio: 0.5
+      position_angle: 0.0
+    src:
+      x_position: 0.1
+      y_position: 0.1
+      radius: 0.1
+      brightness: 1.0
+      sersic_index: 2.0
+      axis_ratio: 1.0
+      position_angle: 0.0
+
+# MCMC settings
+mcmc:
+  likelihood: "EmceeExtendedSource"
+  sampler: "EmceeEnsembleSampler"
+  start_walkers: "Centre"
+  burn_in_iterations: 10
+  final_iterations: 10
+  walkers_initial: 50
+  walkers_factor: 1
+
+# Fitting options
+options:
+  prune: False
+  prune_params:
+    lens:
+      - lensing_strength
+      - slope

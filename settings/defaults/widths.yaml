@@ -1,0 +1,25 @@
+---
+# Gaussian sizes for initialising walkers
+
+# Lens parameters
+lens:
+  lensing_strength: 0.001
+  inner_slope: 0.01
+  outer_slope: 0.01
+  slope: 0.01
+  axis_ratio: 0.005
+  position_angle: 0.10
+  break_radius: 0.01
+  nu_ratio: 0.001
+  ellipticity_x: 0.005
+  ellipticity_y: 0.005
+
+# Source parameters
+src:
+  x_position: 0.001
+  y_position: 0.001
+  radius: 0.001
+  brightness: 0.01
+  sersic_index: 0.01
+  ellipticity_x: 0.01
+  ellipticity_y: 0.01

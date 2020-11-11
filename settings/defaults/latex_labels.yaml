@@ -1,0 +1,25 @@
+---
+# Gaussian sizes for initialising walkers
+
+# Lens parameters
+lens:
+  lensing_strength: "$b$"
+  inner_slope: "$t_1$"
+  outer_slope: "$t_2$"
+  slope: "$t$"
+  axis_ratio: "$q$"
+  position_angle: "$\\phi_\\mathrm{L}$"
+  break_radius: "$\\theta_\\mathrm{B}$"
+  nu_ratio: "$\\nu$"
+  ellipticity_x: "$\\varepsilon_x$"
+  ellipticity_y: "$\\varepsilon_y$"
+
+# Source parameters
+src:
+  x_position: "$\\beta_x$"
+  y_position: "$\\beta_y$"
+  radius: "$r_\\mathrm{eff}$"
+  brightness: "$I_0$"
+  sersic_index: "$n_\\mathrm{S}$"
+  ellipticity_x: "$\\varepsilon_{S_x}$"
+  ellipticity_y: "$\\varepsilon_{S_y}$"

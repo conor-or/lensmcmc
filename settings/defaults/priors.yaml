@@ -1,0 +1,25 @@
+---
+# Limits for uniform priors
+
+# Lens parameters
+lens:
+  lensing_strength: [0.01, 3.0]
+  inner_slope: [0.01, 1.99]
+  outer_slope: [0.01, 1.99]
+  slope: [0.01, 1.99]
+  axis_ratio: [0.01, 1.0]
+  position_angle: [-3.14159265359, 3.14159265359]
+  break_radius: [0.01, 3.0]
+  nu_ratio: [0.01, 1.0]
+  ellipticity_x: [-1.0, 1.0]
+  ellipticity_y: [0.0, 1.0]
+
+# Source parameters
+src:
+  x_position: [-1.0, 1.0]
+  y_position: [-1.0, 1.0]
+  radius: [0.0, 1.0]
+  brightness: [0.0, 2.0]
+  sersic_index: [0.0, 3.0]
+  ellipticity_x: [-1.0, 1.0]
+  ellipticity_y: [0.0, 1.0]

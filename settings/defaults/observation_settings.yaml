@@ -1,0 +1,30 @@
+---
+# Default observation settings
+
+# Settings of the observation itself
+obs:
+  pixel_width: 0.04
+  sig_noise_ratio: 100
+  sub_pixel_lvl: 10
+  field_of_view: 6.0
+  mask_level: 2.0
+  conv_kernel_size: 2.0
+
+# Lens parameters for observation
+lens:
+  lens_model: "SinglePowerLaw"
+  einstein_radius: 1.0
+  slope: 1.0
+  axis_ratio: 0.7
+  position_angle: 0.0
+
+# Source parameters for observation
+src:
+  source_model: "Sersic"
+  x_position: 0.1
+  y_position: 0.1
+  radius: 0.1
+  brightness: 1.0
+  sersic_index: 2.0
+  axis_ratio: 1.0
+  position_angle: 0.0
