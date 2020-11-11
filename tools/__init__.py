@@ -22,7 +22,7 @@ class RunParser(ArgumentParser):
     def parse_args_(self):
         args = self.parse_args()
         target = args.dir
-        args.dir = os.environ['LINSEN_OUTPUT'] + '/' + target
+        args.dir = os.environ['MCMCRUNS'] + '/' + target
         return args
 
 
@@ -46,7 +46,7 @@ def check_master(mpipool):
 
 def generic_yaml_loader(file):
     with open(file, 'r') as f:
-        return yaml.load(f, Loader=yaml.FullLoader)
+        return yaml.load(f)
 
 
 def observation_yaml_loader(file):
@@ -55,7 +55,7 @@ def observation_yaml_loader(file):
     from the yaml file
     """
     with open(file, 'r') as f:
-        p = yaml.load(f, Loader=yaml.FullLoader)
+        p = yaml.load(f)
 
     # Add lensing strength
     if 'lensing_strength' not in p['lens'].keys():
@@ -81,7 +81,7 @@ def fitting_yaml_loader(file, obs=None):
 
     # Load model settings
     with open(file, 'r') as f:
-        p = yaml.load(f, Loader=yaml.FullLoader)
+        p = yaml.load(f)
 
     # Add params if needed
     if not p['model']['inherit']:

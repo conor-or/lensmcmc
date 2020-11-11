@@ -144,7 +144,7 @@ class ObservationFit:
         dark_mode()
 
         # Load latex labels from file
-        latex_labels = generic_yaml_loader(os.environ['LINSEN'] +
+        latex_labels = generic_yaml_loader(os.environ['LENSMCMC'] +
                                            '/settings/defaults/latex_labels.yaml')
 
         labels = []

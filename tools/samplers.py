@@ -25,7 +25,7 @@ class EmceeEnsembleSampler:
 
         # File for writing progress
         self.prog_fname = (
-                os.environ['LINSEN_OUTPUT'] + ('/.progress/000_000_%03d.txt' % it)
+                os.environ['RESULTS'] + ('/.progress/000_000_%03d.txt' % it)
         )
 
     def run_sampling(self, pool=None):

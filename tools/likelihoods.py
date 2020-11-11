@@ -11,8 +11,8 @@ class EmceeLikelihood:
                  priors_file=None, widths_file=None):
 
         # Set default prior and width files
-        self.default_priors = os.environ['LINSEN'] + '/settings/defaults/priors.yaml'
-        self.default_widths = os.environ['LINSEN'] + '/settings/defaults/widths.yaml'
+        self.default_priors = os.environ['LENSMCMC'] + '/settings/defaults/priors.yaml'
+        self.default_widths = os.environ['LENSMCMC'] + '/settings/defaults/widths.yaml'
 
         # Copy data to object
         self.obs, self.p = obs, fit_params

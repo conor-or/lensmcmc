@@ -25,7 +25,7 @@ class Observation:
                           self.p['obs']['field_of_view'])
 
         # Compute noiseless image plane
-        self.img_noiseless = self.massModel.image_plane_sub_pix(self.pix, self.sourceModel)
+        self.img_noiseless = self.massModel.ray_trace(self.pix, self.sourceModel)
 
         # Get the noise level and mask
         self.noise_level, self.mask = snr_set(self.img_noiseless,
